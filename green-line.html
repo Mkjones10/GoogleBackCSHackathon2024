@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Line Assistance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Green Line Landing Page -->
+    <header class="green-header">
+        <h1>Green Line</h1>
+        <p>Enter your departure and arrival stations</p>
+    </header>
+
+    <!-- Form for station input -->
+    <div class="station-form">
+        <label for="departure-station">Departure Station:</label>
+        <input type="text" id="departure-station" name="departure-station">
+
+        <label for="arrival-station">Arrival Station:</label>
+        <input type="text" id="arrival-station" name="arrival-station">
+
+        <button onclick="showSuccess()">Alert Personnel</button>
+    </div>
+
+    <!-- Success Pop-up Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <img src="check.png"  class="success-check">
+            <h2>Success!</h2>
+            <p>CTA personnel at your departure and arrival stations have been notified.</p>
+            <p id="current-time"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
